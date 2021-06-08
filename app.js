@@ -63,8 +63,7 @@ function randomNumber (){
 
 };
 
-
-
+    let previousShownItems = [];
 
 
 function generateAndDisplay (){
@@ -72,16 +71,15 @@ function generateAndDisplay (){
     randomIndexNumberTwo = randomNumber();
     randomIndexNumberThree = randomNumber();
 
-    if (randomIndexNumberOne === randomIndexNumberTwo){
+    while ( randomIndexNumberOne === randomIndexNumberTwo || randomIndexNumberOne === randomIndexNumberThree || randomIndexNumberTwo === randomIndexNumberThree || previousShownItems.includes(randomIndexNumberOne) || previousShownItems.includes(randomIndexNumberTwo) || previousShownItems.includes(randomIndexNumberThree) ){
         randomIndexNumberOne = randomNumber();
-    }
-    else if (randomIndexNumberOne === randomIndexNumberThree){
-        randomIndexNumberOne = randomNumber();
-    }
-    else if ( randomIndexNumberTwo === randomIndexNumberThree){
         randomIndexNumberTwo = randomNumber();
-    }
+        randomIndexNumberThree = randomNumber();
+    } 
 
+
+
+    previousShownItems = [randomIndexNumberOne, randomIndexNumberTwo, randomIndexNumberThree];
 
     firstImage.src = arrOfObjects[randomIndexNumberOne].imagePath;
     arrOfObjects[randomIndexNumberOne].shown++;
