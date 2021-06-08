@@ -93,7 +93,6 @@ function generateAndDisplay (){
     arrOfObjects[randomIndexNumberThree].shown++;
 
 
-
 }
 
 generateAndDisplay();
@@ -119,7 +118,13 @@ function clicking(event){
             return
         }
         
+
+       
+
         generateAndDisplay();
+
+
+        
 
 
     }else {
@@ -170,14 +175,14 @@ let barChart = new Chart(ctx, {
             label: 'Number of Votes',
             data: arrOfVotes,
             backgroundColor: [
-                'rgba(255, 99, 132, 0.4)',
+                'rgb(230, 98, 212);',
             ],
             borderWidth: 1
         },{
           label: 'Times Shown',
           data: arrOfShownItems,
           backgroundColor: [
-              'rgba(100, 120, 132, 0.5)',
+              'rgb(70, 21, 63)',
           ],
           borderWidth: 1
       }

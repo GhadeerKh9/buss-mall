@@ -1,0 +1,27 @@
+.row {
+    text-align: center;
+}
+
+
+body {
+    background-color: rgb(236, 234, 232);
+}
+
+ header h1 {
+     font-family: Georgia, 'Times New Roman', Times, serif;
+     font-size: xx-large;
+     text-align: center;
+     font-weight: bolder;
+     color: rgb(230, 98, 212);
+
+
+
+
+
+ }
+
+ header{
+     background-color: white;
+     height: 100px;
+     text-align: center;
+ }
