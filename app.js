@@ -53,7 +53,7 @@ new images  ('water-can', 'img/water-can.jpg');
 new images ('wine-glass', 'img/wine-glass.jpg');
 
 
-console.log(arrOfObjects);
+// console.log(arrOfObjects);
 
 function randomNumber (){
 
@@ -192,4 +192,39 @@ let barChart = new Chart(ctx, {
 
 
 
-console.log(arrOfNames);
+// console.log(arrOfNames);
+
+
+function savingInLocalStorage (){
+    let stringifiedArray = JSON.stringify(arrOfObjects);
+    localStorage.setItem('KeyArray', stringifiedArray);
+
+
+    console.log(stringifiedArray);
+};
+savingInLocalStorage();
+
+
+
+function gettingData (){
+    let data = localStorage.getItem('keyArray');
+
+    console.log(data);
+    let parsedArray = JSON.parse(data);
+
+    console.log(parsedArray); 
+
+
+    if(parsedArray){
+        arrOfObjects= parsedArray;
+    }
+
+    showList();
+    showChart();
+    buttonElement.removeEventListener('click', showItems);
+
+}
+
+    gettingData();
+
+   
